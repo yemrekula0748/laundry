@@ -1,0 +1,38 @@
+	<ion-view view-title="Dashboard" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-dashboard" class=" page-dashboard">
+		
+		<div class="dashboard-panel">
+			<div class="item item-title item-dark">Dashboard</div>
+			<!-- row -->
+			<div class="row">
+				<a class="col-33 light positive-bg ink"  ng-href="#/laundry_service/menu_1" >
+					<i class="icon ion-android-favorite" ></i>
+					<p>Menu 1</p>
+				</a>
+				<a class="col-33 light positive-900-bg ink"  ng-href="#/laundry_service/menu_2" >
+					<i class="icon ion-android-favorite" ></i>
+					<p>Menu 2</p>
+				</a>
+			</div>
+			<!-- ./row -->
+			<div class="item item-title item-dark">Help</div>
+			<!-- row -->
+			<div class="row">
+				<a class="col-33 light calm-bg ink"  ng-href="#/laundry_service/faqs" >
+					<i class="icon ion-android-chat" ></i>
+					<p>Faqs</p>
+				</a>
+				<a class="col-33 light calm-900-bg ink" ng-click="openURL('market://details?id=com.imabuilder.anaskinet.laundryservice')" >
+					<i class="icon ion-android-playstore" ></i>
+					<p>Rate This App</p>
+				</a>
+			</div>
+			<!-- ./row -->
+			
+
+		</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

@@ -1,0 +1,47 @@
+	<ion-view view-title="Profile" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-profile" class="has-header page-profile">
+		
+    
+<div class="card list">
+ 
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Full Name</span>
+    <input type="text" ng-model="current_user.fullname" ng-value="current_user.fullname">
+  </label>
+  
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Address</span>
+    <input type="text" ng-model="current_user.address" ng-value="current_user.address">
+  </label>
+
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Email</span>
+    <input type="email" ng-model="current_user.email" ng-value="current_user.email">
+  </label>
+  
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Phone</span>
+    <input type="text" ng-model="current_user.phone" ng-value="current_user.phone">
+  </label>
+  
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Type Identity Card</span>
+    <input type="text" ng-model="current_user.type_ic" ng-value="current_user.type_ic">
+  </label>
+    
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">No. Identity Card</span>
+    <input type="text" ng-model="current_user.no_ic" ng-value="current_user.no_ic">
+  </label>
+
+    <div class="padding">
+        <button ng-click="updateUser()" class="button button-assertive ink">Update</button>
+    </div>
+        
+</div>
+
+    
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

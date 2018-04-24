@@ -1,0 +1,48 @@
+	<ion-view view-title="Order Service" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-form_order" class="has-header page-form_order">
+		
+            
+<div class="list card"  >
+	<form ng-submit="submitOrder()">
+        <div class="item item-divider">Order Services</div>
+        
+    	<div class="item item item-icon-left" ion-datetime-picker date time ng-model="form_order.date">
+    		<i class="icon ion-ios-calendar-outline positive"></i>
+    		<span>What time was picked up?</span>
+    		<br/><strong>{{ form_order.date | date:'yyyy-MM-dd H:mm:ss' }}</strong>
+    	</div>
+
+        <ion-list>
+          <ion-radio ng-model="form_order.service" ng-value="'Option A'">Option A</ion-radio>
+<ion-radio ng-model="form_order.service" ng-value="'Option B'">Option B</ion-radio>
+  
+        </ion-list>
+         
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Note</span>
+			<input type="text" ng-model="form_order.note" name="note" placeholder="" />
+		</label>
+                    
+      	<div class="item item-text-wrap">
+    		 <blockquote>
+                Our laundry pickup applies only to members who have registered. 
+            </blockquote>
+    	</div>     
+     
+      	<div class="item item-button noborder">
+    		<button class="button button-assertive ink">Order</button>
+    	</div>
+        
+	</form>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+            
+            
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

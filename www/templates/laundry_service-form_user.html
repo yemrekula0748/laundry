@@ -1,0 +1,36 @@
+	<ion-view view-title="Register" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"  header-shrink="true" scroll-event-interval="5"   id="page-form_user" class="has-header page-form_user">
+		
+
+<div class="hero no-header flat">
+    <div class="content">
+        <div class="app-icon" style="background: url('data/images/avatar/pic6.jpg') center;"></div>
+        <h2>Laundry Service</h2>
+    </div>
+</div>
+
+    
+<div class="list">
+    <ion-md-input placeholder="Full Name" highlight-color="assertive" type="text" ng-model="form_user.fullname"></ion-md-input>
+    <ion-md-input placeholder="User Name" highlight-color="assertive" type="text" ng-model="form_user.uname"></ion-md-input>
+    <ion-md-input placeholder="Password" highlight-color="assertive" type="password" ng-model="form_user.pwd"></ion-md-input>
+    <ion-md-input placeholder="Address" highlight-color="assertive" type="text" ng-model="form_user.address"></ion-md-input>
+    
+    <ion-radio class="item-md-radio" ng-model="form_user.type_ic" ng-value="'Resident Identity Card'">Resident Identity Card</ion-radio>
+    <ion-radio class="item-md-radio" ng-model="form_user.type_ic" ng-value="'Driving Licence'">Driving Licence</ion-radio>
+    <ion-radio class="item-md-radio" ng-model="form_user.type_ic" ng-value="'Other'">Other</ion-radio>
+    
+    <ion-md-input placeholder="No. Identity Card" highlight-color="assertive" type="text" ng-model="form_user.no_ic"></ion-md-input>
+    <ion-md-input placeholder="Phone Number" highlight-color="assertive" type="text" ng-model="form_user.phone"></ion-md-input>
+    <ion-md-input placeholder="Email Address" highlight-color="assertive" type="email" ng-model="form_user.email"></ion-md-input>
+</div>  
+  
+<div class="padding">
+    <button ng-click="submitUser()" class="button button-full button-assertive ink">Sign Up</button>
+    <a class="button button-full button-calm ink" ui-sref="laundry_service.form_login">Sign In Here</a>
+</div>
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

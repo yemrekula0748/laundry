@@ -1,0 +1,3 @@
+[24-Apr-2018 20:02:56 Europe/Moscow] PHP Warning:  mysqli::mysqli(): (HY000/2002): Connection refused in /home/u7970538/kulamobil.site/output/laundry_service/backend/php-sql/rest-api.php on line 38
+[24-Apr-2018 20:03:22 Europe/Moscow] PHP Warning:  mysqli::mysqli(): (HY000/2002): Connection refused in /home/u7970538/kulamobil.site/output/laundry_service/backend/php-sql/rest-api.php on line 38
+[24-Apr-2018 20:04:05 Europe/Moscow] PHP Warning:  mysqli::mysqli(): (HY000/2002): Connection refused in /home/u7970538/kulamobil.site/output/laundry_service/backend/php-sql/rest-api.php on line 38

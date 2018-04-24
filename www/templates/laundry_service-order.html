@@ -1,0 +1,62 @@
+	<ion-view view-title="History" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-order" class="has-header page-order">
+		
+          
+<!-- code refresh -->
+<ion-refresher pulling-text="Pull to refresh..."  on-refresh="doRefresh()"></ion-refresher>
+<!-- ./code refresh -->
+
+<!-- code search -->
+ 
+<ion-list class="card list" >
+	<div class="item item-input">
+		<i class="icon ion-search placeholder-icon"></i>
+		<input type="search" ng-model="filter_orders" placeholder="Filter" aria-label="filter orders" />
+	</div>
+</ion-list>
+ 
+<!-- ./code search -->
+
+
+<!-- code listing -->
+<div class="list animate-none">
+    <div class="list card" ng-repeat="item in orders | filter:filter_orders as results" ng-init="$last ? fireEvent() : null" href="#/laundry_service/order_singles/{{item.id}}" >
+		<div class="item item-colorful">
+            <div  ng-bind-html="item.service | to_trusted"></div>
+            <span class="badge badge-assertive">{{ item.status }}</span>
+        </div>
+		<div class="item item-text-wrap">
+			<blockquote class="to_trusted" ng-bind-html="item.note | to_trusted"></blockquote>
+            <p>Date: {{ item.date | date:'yyyy-MM-dd H:mm:ss'}}</p>
+            
+	   </div>
+ 
+	</div>
+</div>
+<!-- ./code listing -->
+
+
+
+    <!-- code infinite scroll -->
+    <ion-list class="list">
+    	<ion-infinite-scroll ng-if="!noMoreItemsAvailable" on-infinite="onInfinite()" distance="5px" ng-if="hasMoreData">
+        </ion-infinite-scroll>
+    </ion-list>
+    <!-- ./code infinite scroll -->
+
+
+    <!-- code search result not found -->
+    <ion-list class="list" ng-if="results.length == 0">
+    	<div class="item" >
+    		<p>No results found...!</p>
+    	</div>
+    </ion-list>
+    <!-- code search result not found -->
+
+ 
+           
+            
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
